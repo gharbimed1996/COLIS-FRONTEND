@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajouter Colis</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+        
+    </head>
+    <body>
+        <header class="site-header page-width box-shadow flex-row justify-around align-center flex-gap  ">
+            <img src="../../../assets/zad.png" height="100">
+            <div class="desktop-only header-search-bar p-relative flex-row justify-center align-center ">
+                <i class="fa-solid fa-location-crosshairs" id="location-icon-search-bar"></i>
+                <input
+                    type="search"
+                    name="location-search"
+                    id="location-search-bar"
+                    placeholder="Entrer votre adresse pour voir les options de livraison"
+                >
+                <div class="submit-btn-icon-for-location-search flex-row justify-center align-center px-5 py-10 p-absolute">
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon-search-bar"></i>
+                </div>
+            </div>
+            <div class="user-utilis-actions">
+                <!-- <div class="anonymous-user-wrapper flex-row align-center justify-center flex-gap">
+                    <div class="toggle-icons">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-times"></i>
+                    </div>
+                    <div class="connexion   flex-row align-center justify-center flex-gap ">
+                        <div class="fake-wrapper flex-row align-center justify-center flex-gap ">
+                            <div class="login-wrapper">
+                                <button type="button"> Se connecter</button>
+                            </div>
+                            <div class="register-wrapper">
+                                <button type="button"> Créer un compte</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="connected-user-wrapper flex-row align-center justify-center flex-gap">
+                    <div class="toggle-icons">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-times"></i>
+                    </div>
+                    <div class="user-infos   flex-row align-center justify-center flex-gap ">
+                        <div class="fake-wrapper flex-row align-center justify-center flex-gap ">
+                            <!-- <div class="login-wrapper">
+                                <button type="button"> Se connecter</button>
+                            </div>
+                            <div class="register-wrapper">
+                                <button type="button"> Créer un compte</button>
+                            </div> -->
+
+                            <div class="flex-row  flew-wrap flex-gap align-center justify-between ">
+                                <span class="user-whitlist">
+                                    <i class="fa-solid fa-heart"></i>
+                                </span>
+                                <span class="user-notifications p-relative">
+                                    <i class="fa-sharp fa-solid fa-bell"></i>
+                                    <span class="notifications-count p-absolute" > 4 </span>
+                                </span>
+                                <span class="user-track-delivery p-relative">
+                                    <i class="fa-solid fa-truck"></i> 
+                                    <span class="delivery-count p-absolute" > 4 </span>
+                                </span>
+                                <span class="user-profile-image">
+                                    <!-- <img src="assets/images/ups-logo.png" width="50" height="50" alt="User profile "> -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+       
+        <div class="go-back  page-width  flex-row flex-wrap flex-gap align-center ">
+            <a href="/home-template.html" class=" go-back flex-row flex-wrap flex-gap align-center p15">
+                <i class="fa-solid fa-arrow-left"></i>
+                Retour au magasin
+            </a>
+        </div>
+        
+            <div class="left-infos section-title flex-column  flex-wrap flex-gap  ">
+                <h3 class="section-title flex-row flex-wrap flex-gap align-center"> List des colis</h3>
+                <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Fragile</th>
+                    <th scope="col">status</th>
+                    
+                 <br>
+                    <th scope="col">      Actions     </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of users">
+                    <td>{{user.description}}</td>
+                    <td>{{user.matricule}}</td>
+                   
+                    <td>{{user.fragile}}</td>
+                    <strong><td>{{user.status}}</td></strong>
+                    <td><button class="btn btn-outline-primary btn-skew"  (click)="alertwithsuccess()" (click)="accepterColis(user.colisId)">En Depot</button></td>
+                    <td><button class="btn btn-outline-secondary btn-skew" (click)="alertwithsuccess2()"(click)="EncoursColis(user.colisId)">En Cous</button></td>
+                    <td><button class="btn btn-outline-danger btn-skew" (click)="alertwithsuccess3()" (click)="EnretourColis(user.colisId)">Retour</button></td>
+                    <td>
+                        
+                            
+  
+                        
+                          <button class="btn btn-outline-success btn-skew"(click)="alertwithsuccess4()" (click)="livreColis(user.colisId)"  type="button">Livré</button>
+                      
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="right-infos flex-column  flex-wrap flex-gap justify-between align-center ">
+                <div class="right-header">
+                    
+
+                    
+                </div>
+               
+            </div>
+        
+        <footer class="footer  page-width ">
+            <div class="footer-top flex-row justify-around align-center flex-gap flex-wrap">
+                
+                    <div class="logo"><img src="../../../assets/booo.png" width="150"></div>
+                
+                <div class="navigations flex-row justify-around align-center flex-gap flex-wrap">
+                    <ul class="nav-one flex-column justify-around align-center flex-gap flex-wrap">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class="nav-one flex-column justify-around align-center flex-gap flex-wrap">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class="nav-one flex-column justify-around align-center flex-gap flex-wrap">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class="nav-one flex-column justify-around align-center flex-gap flex-wrap">
+                        <select name="money" id="money-switcher">
+                            <option value="euro">EUR</option>
+                            <option value="us-dollars">Dollars</option>
+                            <option value="euro">EUR</option>
+                        </select>
+                        <select name="country" id="country-switcher">
+                            <option value="fr">France</option>
+                            <option value="en">English</option>
+                            <option value="es">Espagne</option>
+                        </select>
+                    </ul>
+                </div>
+                <div class="text-center flex-row justify-center align-center flex-wrap flex-gap">
+                    <p class="copyright"> Express & Go &copy; All rightsd reserved. Company</p>
+                </div>
+            </div>
+            <ul class="footer-bottom flex-row justify-around align-center flex-wrap flex-gap">
+                <ul class="social-medias  flex-row justify-center align-center flex-wrap flex-gap">
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="brand-logo">
+                    
+                </div>
+                <div class="help-desk">
+                    <h5>Need helps ?</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="call-center">
+                    <h4>
+                        <i class="fa-solid fa-phone"></i>
+                        +(123) 55 56 778 44
+                    </h4>
+                    
+                        <div class="logo"><img src="../../../assets/booo.png" width="150"></div>
+                    
+                </div>
+            </ul></footer>
+            
+            
+
+        <script src="assets/script-js/menu-tablet-toggler.js"></script>
+    </body>
+</html>
+
+

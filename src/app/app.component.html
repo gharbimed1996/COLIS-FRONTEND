@@ -1,0 +1,70 @@
+<div id="app">
+  <nav >
+
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+      </li>
+      <li class="nav-item" *ngIf="showModeratorBoard">
+        <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
+      </li>
+      <li class="nav-item">
+        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+      </li>
+    </ul>
+
+    <header class="site-header page-width box-shadow flex-row justify-around align-center flex-gap  ">
+      <div class="brand-logo-container flex-row justify-center align-center ">
+        <div ><img src="assets/image/log.PNG"></div>
+      </div>
+      <div class="desktop-only header-search-bar p-relative flex-row justify-center align-center ">
+        <i class="fa-solid fa-location-crosshairs" id="location-icon-search-bar"></i>
+        <input
+          type="search"
+          name="location-search"
+          id="location-search-bar"
+          placeholder="Entrer votre adresse pour voir les options de livraison"
+        >
+        <div class="submit-btn-icon-for-location-search flex-row justify-center align-center px-5 py-10 p-absolute">
+          <i class="fa-solid fa-magnifying-glass" id="search-icon-search-bar"></i>
+        </div>
+      </div>
+      <div class="user-utilis-actions">
+        <div class="anonymous-user-wrapper flex-row align-center justify-center flex-gap">
+          <div class="toggle-icons">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-times"></i>
+          </div>
+          <div class="connexion   flex-row align-center justify-center flex-gap ">
+            <div class="fake-wrapper flex-row align-center justify-center flex-gap ">
+              <div class="login-wrapper">
+                <button type="button" routerLinkActive="active" routerLink="ajoutDemande" href="/ajoutDemande">Devenir un partenaire  </button>
+              </div>
+
+              <div class="register-wrapper">
+                <button type="button" routerLinkActive="active" routerLink="register" href="/login">Se connecter</button>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+
+
+    <router-outlet></router-outlet>
+  </div>
+
+

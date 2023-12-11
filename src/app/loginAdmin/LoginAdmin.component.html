@@ -1,0 +1,86 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+
+
+
+</head>
+<body>
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center mb-5">
+        <h2 class="heading-section">Hello Admin</h2>
+      </div>
+    </div>
+
+          <form action="#" class="login-form"
+                *ngIf="!isLoggedIn"
+                name="form"
+                (ngSubmit)="f.form.valid && onSubmit()"
+                #f="ngForm"
+                novalidate>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                class="form-control rounded-left"
+                name="username"
+                [(ngModel)]="form.username"
+                required
+                #username="ngModel"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">password</label>
+              <input
+                type="password"
+                class="form-control rounded-left"
+                name="username"
+                [(ngModel)]="form.password"
+                required
+                #password="ngModel"
+              />
+
+            </div>
+            <div class="form-group d-md-flex">
+              <div class="w-50">
+                <label class="checkbox-wrap checkbox-primary">Remember Me
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="w-50 text-md-right">
+                <a href="#">Forgot Password</a>
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary rounded submit p-3 px-5" >
+                Login
+              </button>
+              <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="f.submitted && isLoginFailed"
+              >
+                Login failed: {{ errorMessage }}
+              </div>
+
+
+            </div>
+          </form>
+        </div>
+
+</section>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
+

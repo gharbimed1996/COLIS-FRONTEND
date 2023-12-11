@@ -1,0 +1,144 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-width {
+    width: 100%;
+    padding: 0;
+    /* max-width: 1600px; */
+    margin: auto;
+    box-sizing: border-box;
+}
+
+
+/* .box-shadow {
+    box-shadow: 0px 2px 4px rgba( 0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.3);
+} */
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.flex-row {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+.text-like-gray {
+    color: #A1A1A1;
+}
+.flex-gap {
+    gap: .5rem;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.px-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.py-5 {
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.mx-5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.my-5 {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.p5 {
+    padding: 5px;
+}
+
+.p15 {
+    padding: 15px;
+}
+
+.p10 {
+    padding: 10px;
+}
+
+.m5 {
+    margin: 5px;
+}
+
+.m15 {
+    margin: 15px;
+}
+
+.m10 {
+    margin: 10px;
+}
+
+a,button{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button, input, input:focus  {
+    outline: none;
+}
+
+
+.radius-normal{
+    border-radius: 7px;
+}
+
+.p-relative{
+    position: relative;
+}
+.p-absolute{
+    position: absolute;
+}
+.p-sticky{
+    position: sticky;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+
+input:not(input[type="text"]):not(input[type="search"]):hover,
+label:hover,
+button:hover,
+a:hover {
+    cursor: pointer;
+}

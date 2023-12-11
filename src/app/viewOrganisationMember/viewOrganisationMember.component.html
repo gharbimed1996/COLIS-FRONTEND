@@ -1,0 +1,205 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+
+<!--<body>-->
+
+<!--    &lt;!&ndash;Main Content&ndash;&gt;-->
+<!--    <div class="mt-5">-->
+<!--        <h1 class="text-center">Les membres</h1>-->
+<!--        <div class="container">-->
+<!--          <div class="form-group">-->
+<!--            <label for="search">Search:</label>-->
+<!--            <input type="text" class="form-control" id="search" [(ngModel)]="searchTerm">-->
+<!--          </div>-->
+
+
+<!--            <table class="table border" >-->
+<!--                <thead>-->
+<!--                  <tr>-->
+<!--                    <th scope="col">ID</th>-->
+<!--                    <th scope="col">username</th>-->
+<!--                    <th scope="col">email</th>-->
+
+
+
+<!--                  </tr>-->
+<!--                </thead>-->
+<!--                <tbody>-->
+<!--                  <tr *ngFor="let product  of members ">-->
+<!--                    <td>{{product.id}}</td>-->
+<!--                    <td>{{product.username}}</td>-->
+<!--                    <td>{{product.email}}</td>-->
+
+
+
+<!--                  </tr>-->
+<!--                </tbody>-->
+<!--              </table>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!--<router-outlet></router-outlet>-->
+<!--<div class="mt-5">-->
+<!--  <h1 class="text-center">All demande</h1>-->
+<!--  <div>-->
+<!--    &lt;!&ndash;Add User Button&ndash;&gt;-->
+<!--    <div class="my-3">-->
+<!--      <a href="/addentreprise"><button type="button" class="btn btn-primary" >Add entreprise</button></a>-->
+<!--    </div>-->
+<!--    <table class="table border" >-->
+<!--      <thead>-->
+<!--      <tr>-->
+<!--        <th scope="col">ID</th>-->
+<!--        <th scope="col">Nom</th>-->
+<!--        <th scope="col">emailPro</th>-->
+<!--        <th scope="col">Options</th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+<!--      <tbody>-->
+<!--      <tr *ngFor="let categorie of demande">-->
+<!--        <td>{{categorie.id}}</td>-->
+<!--        <td>{{categorie.entrepriseName}}</td>-->
+<!--        <td>{{categorie.emailPro}}</td>-->
+
+<!--        <td>-->
+
+<!--          <div class="d-inline">-->
+<!--            <button class="btn btn-danger"  type="button">Refuser</button>-->
+<!--          </div>-->
+<!--          <div class="d-inline">-->
+
+<!--          </div>-->
+<!--        </td>-->
+<!--      </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
+<!--  </div>-->
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  &lt;!&ndash; Required meta tags &ndash;&gt;-->
+<!--  <meta charset="utf-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+
+<!--  <title>Table #7</title>-->
+<!--</head>-->
+<!--<body >-->
+
+
+<!--<div class="content">-->
+
+<!--  <div class="container">-->
+<!--    <h3 class="mb-5">Liste des demandes </h3>-->
+<!--    <a href="/addentreprise"><div>-->
+<!--      <button type="button" routerLinkActive="active" routerLink="register" class="btn btn-outline-secondary" >Ajouter une entreprise </button>-->
+<!--    </div></a>-->
+
+
+
+
+<!--    <div class="table-responsive">-->
+
+<!--      <table class="table table-striped custom-table" >-->
+<!--        <thead>-->
+<!--        <tr>-->
+
+<!--          <th scope="col">ID</th>-->
+<!--          <th scope="col">Nom</th>-->
+
+
+
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr scope="row" class="active">-->
+<!--        <tr *ngFor="let categorie of demande">-->
+<!--                  <td>{{categorie.id}}</td>-->
+<!--                  <td>{{categorie.entrepriseName}}</td>-->
+<!--               <td>{{categorie.emailPro}}</td>-->
+
+
+
+
+
+<!--        </tbody>-->
+<!--      </table>-->
+<!--    </div>-->
+
+
+<!--  </div>-->
+
+<!--</div>-->
+
+
+
+<!--<script src="js/jquery-3.3.1.min.js"></script>-->
+<!--<script src="js/popper.min.js"></script>-->
+<!--<script src="js/bootstrap.min.js"></script>-->
+<!--<script src="js/main.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <title></title>
+</head>
+<body>
+
+
+<div class="content">
+
+  <div class="container">
+    <h3 class="mb-5">Liste des membres</h3>
+
+
+    <div class="table-responsive custom-table-responsive">
+
+      <table class="table custom-table">
+        <thead>
+        <tr>
+
+
+                              <th scope="col">ID</th>
+                              <th scope="col">username</th>
+                              <th scope="col">email</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let categorie of members">
+          <td>{{categorie.id}}</td>
+          <td>{{categorie.username}}</td>
+          <td>{{categorie.email}}</td>
+
+
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

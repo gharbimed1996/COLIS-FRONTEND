@@ -1,0 +1,10 @@
+/* we import css from the same folder  */
+
+/* global utilis css properties */
+@import url('utils.css');
+/* customises the global css for each element if needed */
+@import url('custom-style.css');
+/* tablette css */
+@import url('responsive-tablette.css');
+/* mobile */
+@import url('responsive-mobile.css');

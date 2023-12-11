@@ -1,0 +1,65 @@
+@media screen and (max-width: 490px) {
+    
+
+
+    .steps .step, .footer .navigations > *  {
+        flex: 100%;
+        width: 100%;
+    }
+
+    
+    
+    .brand {
+        margin: 1rem 0px !important;
+    }
+    
+    
+    .footer .navigations [class^="nav-"] {
+        margin: 1rem 0 !important;
+        padding-left: 0 !important;
+    }
+    
+    .hero-section .argument {
+        width: 100%;
+        margin: 1rem 0 !important;
+        max-width: 400px;
+    }
+
+    .brand-arguments  {
+        padding: 2rem 0;
+    }
+
+
+
+
+
+    /* checkout  */
+
+
+
+    .checkout-infos .left-infos, .checkout-infos .right-infos, .checkout-form .form-row .form-column {
+        flex: 100%;
+        box-sizing: border-box;
+        width: 96%;
+        margin: auto;
+    }
+
+    .checkout-form .mode_payment_row>.form-column>label, .checkout-form .type_livraison_row>.form-column>label {
+        margin-left: -5px !important;
+    }
+
+    .checkout-form .form-row .form-column>label {
+        font-size: 1.1rem;
+    }
+    .checkout-form .mode_payment_row>.form-column>input, .checkout-form .type_livraison_row>.form-column>input{
+        height: 17px;
+    }
+
+    .checkout-infos .form-section-title, .checkout-form .submit-wrapper button {
+        font-size: 1.3rem;
+    }
+    .checkout-form .submit-wrapper button {
+        padding: .6rem;
+    }
+    
+}

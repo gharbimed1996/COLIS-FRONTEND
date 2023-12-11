@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Categorie</title>
+</head>
+<body>
+
+
+    <!--Main Content-->
+    <div class="my-5">
+      <div class="mx-auto w-25 " style="max-width:100%;">
+        <h2 class="text-center mb-3">Ajouter une demande</h2>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="entrepriseName" class="form-label">entrepriseName</label>
+              <input id="entrepriseName"  formControlName="entrepriseName" type="text" name="entrepriseName" class="form-control" placeholder="entrepriseNames" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="emailPro" class="form-label">emailPro</label>
+              <input id="emailPro"  formControlName="emailPro" type="text" name="emailPro" class="form-control" placeholder="emailPros" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="matricule" class="form-label">matricule</label>
+              <input id="matricule"  formControlName="matricule" type="text" name="matricule" class="form-control" placeholder="matricules" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="description" class="form-label">description</label>
+              <input id="description" type="text"  formControlName="description" name="description" class="form-control" placeholder="description" required>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Envoyer" >
+            </div>
+          </div>
+
+          <div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

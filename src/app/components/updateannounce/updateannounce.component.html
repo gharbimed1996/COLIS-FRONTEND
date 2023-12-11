@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier Announce</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+    <!--Main Content-->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center mb-0">Modifier Announce</h2>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="form" (ngSubmit)="submit()">
+                            <div class="form-group">
+                                <label for="reference">Reference</label>
+                                <input id="reference" formControlName="reference" type="text" name="reference" class="form-control" placeholder="Reference" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prix">Prix</label>
+                                <input id="prix" type="text" formControlName="prix" name="prix" class="form-control" placeholder="Prix" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <input id="description" type="text" name="description" formControlName="description" class="form-control" placeholder="Description" required>
+                            </div>
+                            <div class="form-group">
+                                <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Modifier">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
